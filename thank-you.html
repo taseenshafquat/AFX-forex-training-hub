@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>You’re booked | AFX Training Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font:17px/1.55 'Instrument Sans',system-ui,sans-serif;color:#0E1A2B;background:#F6F4EF}
+.wrap{max-width:560px;margin:0 auto;padding:56px 20px}
+h1,h2{font-family:Fraunces,Georgia,serif;line-height:1.15}
+h1{font-size:clamp(2rem,6vw,2.6rem);margin:0 0 .4em}
+h2{font-size:1.3rem;margin:0 0 .4em}
+p,ol{color:#55606E}
+ol{padding-left:20px}
+.btn{display:inline-block;margin:12px 0 28px;padding:14px 22px;border-radius:6px;background:#F2B33D;color:#0E1A2B;font-weight:600;text-decoration:none}
+.btn:focus-visible{outline:3px solid #1F6F78;outline-offset:2px}
+.small{font-size:.88rem}
+</style>
+<!-- Meta Pixel: replace PIXEL_ID. Lead fires once per visit, only on this page. -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','PIXEL_ID');fbq('track','PageView');
+var sent=false;try{sent=sessionStorage.getItem('lead_sent')}catch(e){}
+if(!sent){fbq('track','Lead');try{sessionStorage.setItem('lead_sent','1')}catch(e){}}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <h1>You’re booked in.</h1>
+  <p>We’ll message you on WhatsApp within the hour to agree a time for your free consultation. For a faster reply, message us first:</p>
+  <a class="btn" href="https://wa.me/923042630004?text=Hi%2C%20I%20just%20booked%20a%20free%20forex%20consultation.">Message us on WhatsApp</a>
+  <h2>What happens next</h2>
+  <ol>
+    <li>We confirm a time on WhatsApp.</li>
+    <li>You speak with the mentor, in person at North Nazimabad or by call.</li>
+    <li>You decide if the course is right for you. There’s no obligation.</li>
+  </ol>
+  <p class="small">AFX Training Hub, North Nazimabad, Karachi · +92 304 2630004</p>
+</div>
+</body>
+</html>
