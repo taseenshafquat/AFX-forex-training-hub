@@ -77,9 +77,10 @@ fbq('init','PIXEL_ID');fbq('track','PageView');
 <div class="wrap hero">
   <div>
     <h1>Learn forex from an expert, starting with a free 1-on-1.</h1>
-    <p class="lede">Talk to a mentor for. Tell us where you are, and we’ll show you a structured way to learn, with risk control first. No payment is taken.</p>
+    <p class="lede">Talk to a mentor for [DURATION] minutes. Tell us where you are, and we’ll show you a structured way to learn, with risk control first. No payment is taken.</p>
     <ul class="facts">
       <li><strong>Where:</strong> North Nazimabad, Karachi, or by phone call</li>
+      <li><strong>Cost:</strong> free</li>
       <li><strong>Who it’s for:</strong> complete beginners and anyone who has tried and struggled</li>
     </ul>
   </div>
@@ -91,7 +92,7 @@ fbq('init','PIXEL_ID');fbq('track','PageView');
       <input id="name" name="name" autocomplete="name" required>
       <label for="whatsapp">WhatsApp number</label>
       <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="03XX XXXXXXX" pattern="[0-9+ \-]{10,15}" required>
-      <label for="email">Email address <span class="opt">(required)</span></label>
+      <label for="email">Email address <span class="opt">(optional)</span></label>
       <input id="email" name="email" type="email" autocomplete="email">
       <div class="row">
         <div><label for="age">Age</label><input id="age" name="age" type="number" inputmode="numeric" min="18" max="70" required></div>
@@ -180,14 +181,14 @@ fbq('init','PIXEL_ID');fbq('track','PageView');
     <div><h3>Risk management and psychology</h3><p>The habits that keep beginners from blowing their first account.</p></div>
     <div><h3>Mentorship and support</h3><p>[CONFIRM: what support is included and for how long.]</p></div>
   </div>
-  <p class="small">Course fee:Discuss it with the mentor on your free call..</p>
+  <p class="small">Course fee: [CONFIRM CURRENT FEE]. Discuss it with the mentor on your free call. There’s no obligation.</p>
 </div></section>
 
 <section><div class="wrap mentor">
   <figure><img src="mentor.jpg" alt="[MENTOR NAME], lead mentor at AFX Training Hub" onerror="this.closest('section').hidden=true"></figure>
   <div>
     <h2>Who you’ll speak with</h2>
-    <p> one of the Mentor leading training at AFX Training Hub. Include 8+ years of experience</p>
+    <p>[MENTOR NAME] leads training at AFX Training Hub. [ONE OR TWO LINES OF BACKGROUND. Include years of experience or credentials only if you can prove them.]</p>
   </div>
 </div></section>
 
@@ -197,8 +198,8 @@ fbq('init','PIXEL_ID');fbq('track','PageView');
 
 <section class="band"><div class="wrap">
   <h2>Straight answers</h2>
-  <details><summary>Is the consultation really free?</summary><p>Yes. Nothing is charged for the consultation.</p></details>
-  <details><summary>Is this a sales pitch?</summary><p>The consultation is a conversation about your goals. We’ll explain our course if it fits you, and you’re free to say no.</p></details>
+  <details><summary>Is the consultation really free?</summary><p>Yes. Nothing is charged for the consultation. [CONFIRM: no payment is requested during it.]</p></details>
+  <details><summary>Is this a sales pitch?</summary><p>The consultation is a conversation about your goals. We’ll explain our course if it fits you, and you’re free to say no. [CONFIRM with the team.]</p></details>
   <details><summary>I have no experience. Is this for me?</summary><p>Yes. Beginners start on a demo account, not with their savings.</p></details>
   <details><summary>Do you promise profits?</summary><p>No. Forex is not guaranteed income, and trading carries real risk. We teach skills and risk control.</p></details>
   <details><summary>Where are you?</summary><p>[FULL ADDRESS], North Nazimabad, Karachi. You can also do the consultation by phone call.</p></details>
@@ -221,7 +222,6 @@ f.addEventListener('submit',function(e){
   if(!f.checkValidity()){f.reportValidity();return}
   if(f.elements.website.value)return;
   f.elements.interests.value=Array.prototype.map.call(f.querySelectorAll('.chk input:checked'),function(c){return c.value}).join(', ');
-  f.elements.interests.value=Array.prototype.map.call(f.querySelectorAll('.int:checked'),function(c){return c.value}).join(', ');
   btn.disabled=true;btn.textContent='Sending…';
   fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',body:new URLSearchParams(new FormData(f))})
     .then(function(){location.href='thank-you.html'})
